@@ -4,18 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
     <main class="main">
-      <img src="./assets/woman.jpg" />
+      <img src="./public/assets/woman.jpg" />
       <div class="cube">
-        <div class="face face--left"></div>
-        <div class="face face--right"></div>
-        <div class="face face--top"></div>
-        <div class="face face--bottom"></div>
-        <div class="face face--front"></div>
-        <div class="face face--back"></div>
+        <div class="face face--left">
+          <img src="./public/assets/logo.jpg" alt="logo du site">
+        </div>
+        <div class="face face--right">
+          <img src="./public/assets/logo.jpg" alt="logo du site">
+        </div>
+        <div class="face face--top">
+          <img src="./public/assets/logo.jpg" alt="logo du site">
+        </div>
+        <div class="face face--bottom">
+          <img src="./public/assets/logo.jpg" alt="logo du site">
+        </div>
+        <div class="face face--front">
+          <img src="./public/assets/logo.jpg" alt="logo du site">
+        </div>
+        <div class="face face--back">
+          <img src="./public/assets/logo.jpg" alt="logo du site">
+        </div>
       </div>
       <form id="login-form">
         <input id="email" placeholder="Entrez votre email" />
@@ -28,8 +40,8 @@
     <script type="module">
       // cela dit que je vais potentiellement importé des fichiers entre ces
       // balises (fichiers .js)
-      import { AuthService } from "./services/auth.service.js"
-      import { submitCallback } from "./handlers/submitHandler.js"
+      import { AuthService } from "./src/services/auth.service.js"
+      import { submitCallback } from "./src/handlers/submitHandler.js"
 
       window.addEventListener("DOMContentLoaded", () => {
         // je déclare une variable form et stocke en elle l'élément HTML de type form
