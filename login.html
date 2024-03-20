@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <img src="./assets/woman.jpg" />
+      <div class="cube">
+        <div class="face face--left"></div>
+        <div class="face face--right"></div>
+        <div class="face face--top"></div>
+        <div class="face face--bottom"></div>
+        <div class="face face--front"></div>
+        <div class="face face--back"></div>
+      </div>
+      <form id="login-form">
+        <input id="email" placeholder="Entrez votre email" />
+        <input id="password" placeholder="Entrez votre mot de passe" />
+        <button type="submit">Valider</button>
+        <button type="reset">Réinitialiser</button>
+      </form>
+    </main>
+
+    <script type="module">
+      // cela dit que je vais potentiellement importé des fichiers entre ces
+      // balises (fichiers .js)
+      import { AuthService } from "./services/auth.service.js"
+      import { submitCallback } from "./handlers/submitHandler.js"
+
+      window.addEventListener("DOMContentLoaded", () => {
+        // je déclare une variable form et stocke en elle l'élément HTML de type form
+        
+
+
+        const form = document.getElementById("login-form");
+        form.addEventListener("submit", submitCallback);
+      });
+    </script>
+  </body>
+</html>
